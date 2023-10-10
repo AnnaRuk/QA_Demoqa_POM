@@ -1,5 +1,6 @@
 package org.ait.demoqa.tests;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -9,7 +10,7 @@ import java.time.Duration;
 
 public class TestBase {
 
-    WebDriver driver;
+   public WebDriver driver;
 
     @BeforeMethod
     public void init(){

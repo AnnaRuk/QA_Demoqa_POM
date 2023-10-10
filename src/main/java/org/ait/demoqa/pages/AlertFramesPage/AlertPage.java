@@ -1,6 +1,6 @@
-package org.ait.demoqa.pages;
+package org.ait.demoqa.pages.AlertFramesPage;
 
-import org.checkerframework.checker.signature.qual.FieldDescriptor;
+import org.ait.demoqa.pages.BasePage;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +12,7 @@ import org.testng.Assert;
 
 import java.time.Duration;
 
-public class AlertPage extends BasePage{
+public class AlertPage extends BasePage {
     public AlertPage(WebDriver driver) {
         super(driver);
     }
@@ -69,7 +69,7 @@ public class AlertPage extends BasePage{
     }
     public AlertPage acceptAlertWithWait() {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(7));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             wait.until(ExpectedConditions.alertIsPresent()).accept();
         } catch (NoAlertPresentException e){
 

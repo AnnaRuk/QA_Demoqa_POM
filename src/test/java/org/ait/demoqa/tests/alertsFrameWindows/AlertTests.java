@@ -1,11 +1,12 @@
-package org.ait.demoqa.tests;
+package org.ait.demoqa.tests.alertsFrameWindows;
 
-import org.ait.demoqa.pages.AlertPage;
+import org.ait.demoqa.pages.AlertFramesPage.AlertPage;
 import org.ait.demoqa.pages.HomePage;
+import org.ait.demoqa.tests.TestBase;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class AlertTests extends TestBase{
+public class AlertTests extends TestBase {
 
     //PRE
     //1. click  on Alerts, Frame & Windows

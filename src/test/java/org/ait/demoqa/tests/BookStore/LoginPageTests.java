@@ -1,12 +1,14 @@
-package org.ait.demoqa.tests;
+package org.ait.demoqa.tests.BookStore;
 
+import org.ait.demoqa.data.UserData;
 import org.ait.demoqa.pages.HomePage;
-import org.ait.demoqa.pages.LoginPage;
+import org.ait.demoqa.pages.BookStore.LoginPage;
 import org.ait.demoqa.pages.SidePanel;
+import org.ait.demoqa.tests.TestBase;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class LoginPageTests extends TestBase{
+public class LoginPageTests extends TestBase {
 
 
     @BeforeMethod // move to login Page
@@ -17,7 +19,7 @@ public class LoginPageTests extends TestBase{
 
     @Test
     public void loginPositiveTest(){
-        new LoginPage(driver).loginPositive("Anna","Qwerty007!")
+        new LoginPage(driver).loginPositive(UserData.USER_NAME,UserData.USER_PASSWORD)
                 .verifyUserName("Anna");
 
     }

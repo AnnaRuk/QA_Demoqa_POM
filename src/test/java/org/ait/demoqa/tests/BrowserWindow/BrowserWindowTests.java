@@ -1,11 +1,12 @@
-package org.ait.demoqa.tests;
+package org.ait.demoqa.tests.BrowserWindow;
 
-import org.ait.demoqa.pages.BrowserWindow;
+import org.ait.demoqa.pages.BrowserPage.BrowserWindow;
 import org.ait.demoqa.pages.HomePage;
+import org.ait.demoqa.tests.TestBase;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class BrowserWindowTests extends TestBase{
+public class BrowserWindowTests extends TestBase {
 
     @BeforeMethod
     public void precondition(){
