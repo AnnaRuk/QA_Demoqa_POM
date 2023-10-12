@@ -26,7 +26,7 @@ public class PracticeFormTests extends TestBase {
                         StudentData.LAST_NAME,
                         StudentData.EMAIL,
                         StudentData.PHONE)
-        //select gender
+        //select gende
                 .selectGender(StudentData.GENDER)
         //enter date
              .selectDate("May","2001","15") //1 variant

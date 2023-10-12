@@ -4,10 +4,7 @@ import org.ait.demoqa.pages.AlertFramesPage.FramePage;
 import org.ait.demoqa.pages.AlertFramesPage.NestedFramesPage;
 import org.ait.demoqa.pages.BookStore.LoginPage;
 import org.ait.demoqa.pages.BookStore.ProfilePage;
-import org.ait.demoqa.pages.elements.BrokenLinksImagesPage;
-import org.ait.demoqa.pages.elements.ButtonsPage;
-import org.ait.demoqa.pages.elements.LinksPage;
-import org.ait.demoqa.pages.elements.TextBoxPage;
+import org.ait.demoqa.pages.elements.*;
 import org.ait.demoqa.pages.forms.PracticeFormPage;
 import org.ait.demoqa.pages.interactions.DroppablePage;
 import org.ait.demoqa.pages.widgets.*;
@@ -16,6 +13,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class SidePanel extends BasePage {
+
     public SidePanel(WebDriver driver) {
         super(driver);
     }
@@ -136,5 +134,12 @@ public class SidePanel extends BasePage {
         click(textBox);
 
         return new TextBoxPage(driver);
+    }
+
+    @FindBy(xpath = "//span[.='Upload and Download']")
+    WebElement upload;
+    public UploadPage selectUpload() {
+                clickWithJSExecutor(upload,0,300);
+        return new UploadPage(driver);
     }
 }
